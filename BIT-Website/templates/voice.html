@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+{% block title %} Clubs {% endblock %}
+{% block content %}
+
+<style>
+    div.polaroid {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        width: 80%;
+
+        background-color: #1abc9c;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+
+
+    }
+
+
+
+    div.container {
+        text-align: center;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    @media only screen and (max-width: 300px) {
+        .container {
+            font-size: 11px
+        }
+    }
+</style>
+<!-- ##### Breadcrumb Area Start ##### -->
+<div class="container">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>Clubs of BIT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>
+                                    Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- About Us Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h3>Voice Club</h3>
+                        </div>
+
+
+                        <p style="text-align: center;"><img class="size-full wp-image-169 aligncenter"
+                                src="\img\club-img\voice_logo.jpg" alt="" width="173" height="214"></p>
+
+                        <p> VOICE stands for <b>Vision Opportunities Innovation/Ideas Communication Empowerment</b> .
+                            Voice’s efforts of a democratic student body where plans, ideas, events, campaigns and
+                            activities are run by the students as they choose for promoting gender equitable spaces
+                            within the campus. The core of Voice is to work constructively and positively to promote
+                            safe spaces and not protest and violate laws at any point of time.
+                        </p>
+                    </div>
+                    <div class="polaroid">
+
+                        <div class="mySlides ">
+                            <img src="/img/club-img/voice7.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Voice BIT</div>
+                        </div>
+                        <div class="mySlides ">
+                            <img src="/img/club-img/voice8.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Activities</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice6.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Activities</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice9.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Activities</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice1.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Debate on Speed Networking</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice5.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Celebration of International Women's Day</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice4.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Celebration of International Women's Day</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice2.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Celebration of International Women's Day</div>
+                        </div>
+                        <div class="mySlides">
+                            <img src="/img/club-img/voice3.jpg" alt="trying" style="width:400px;height:200px;">
+                            <div class="container">Celebration of International Women's Day</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+                    <!-- Sidebar Widget -->
+                    <div class="single-sidebar-widget p-30">
+                        <!-- Social Followers Info -->
+                        <div class="social-followers-info">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/thevoicebit/" class="instagram-followers"><i
+                                    class="fa fa-instagram"></i> <span>Instagram</span></a>
+                            <!-- Facebook-->
+                            <a href="https://www.facebook.com/thevoicebit/" class="facebook-fans"><i
+                                    class="fa fa-facebook"></i> <span>Facebook</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+<!-- ##### Breadcrumb Area End ##### -->
+
+<!-- ##### Breadcrumb Area Start ##### -->
+
+</div>
+
+</section>
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+
+    }
+</script>
+{% endblock %}

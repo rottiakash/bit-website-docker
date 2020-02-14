@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% block title %}DEPARTMENT OF CIVIL ENGINEERING{% endblock %}
+{% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>DEPARTMENT OF CIVIL ENGINEERING</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p >The Civil Engineering department is one of the first departments established by the college during 1979 with an intake of 90. Currently the department has an intake of 180 students. The department was established with an objective to train and develop Civil Engineering Professionals who will be sensitive and serve for the betterment of the society. It is doing its best with the support of competent faculty and well equipped laboratories to develop quality civil engineers.<br><br>
+
+                      The department is also offering M.Tech Program in Structural Engineering with an intake of 18 students. The department is recognized as Research Centre by Visvesvaraya Technological University and offers M. Sc. Engineering (by Research) and PhD Programs. We have association with acclaimed professional bodies.<br><br>
+                      
+                      Our students have excelled in extracurricular activities and have brought many prizes and awards in ICI and ACCE(I). students have been placed in consultancy firms, construction industries, infrastructure facilitators and Government sectors.</p><br><br>
+                        
+                                <div class="d-flex justify-content-center"><div class="card" style="width: 18rem;">
+                                    <img src="/faculty/CV01.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dr. H. B. Balakrishna</h5>
+                                        <p class="card-text">Prof. & Head of the Dept
+                                            </p>
+                                        </div>
+                                    </div></div>
+                               
+                            
+                            <!-- Team Member Area -->
+                            <div class="section-heading mt-30">
+                               <h5> Vision and Mission </h5>
+                            </div>
+                           
+                              <h3>VISION </h3>
+              <p >To become a center of excellence in Academics, Research and Consultancy by imparting quality education and developing competent civil engineering professionals who will be sensitive, ethical and serve for the betterment of the society.</p>
+              <h3>MISSION</h3>
+              <ul  style="color:#666666;padding-left:20px"><li>To train civil engineering students to graduate with knowledge and skills required to solve civil engineering problems, to become leaders in organizations and for a wide range of careers.</li>
+              <li>To create civil engineering professionals through collaborative programs with professional bodies, research organisations and industry for the betterment of the society.</li>
+              <li>To be recognized by the industry as a centre of excellence for Research and Development to solve civil engineering problems.</li>
+              <li>To create a learning environment and provide limitless possibilities to students and staff to excel in their careers</li>
+              </ul><h3 style="padding-top:20px">PROGRAM EDUCATIONAL OBJECTIVES</h3>
+              <ul  style="color:#666666;padding-left:20px"><li>PEO1: will be trained to excel in their professional career by acquiring factual, analytical, procedural, application and creative knowledge in mathematical, computing and civil engineering principles.</li>
+              <li>PEO2: Will be trained to analyze and design practically sustainable civil engineering systems which involve sound civil engineering skills, optimum and acceptable solutions to the society.</li>
+              <li>PEO3: Will be trained to exhibit professionalism, ethics with good communications skills background.</li>
+              <li>PEO4:Will be trained in continuing education and engage them in lifelong learning to be competitive and enterprising </li>
+              </ul><h3 style="padding-top:20px">PROGRAM SPECIFIC OUTCOMES (PSOs)</h3>
+              <ul  style="color:#666666;padding-left:20px">
+              <li>PSO1: The graduates will have the ability to plan, analyze, design, execute and maintain cost effective civil engineering structures without over exploitation of natural resources.</li>
+              <li>PSO2: The graduates of civil engineering program will have the ability to take up employment, entrepreneurship, research and development for sustainable civil society.</li>
+              <li>PSO3: The graduates will be able to peruse opportunities for personal and professional growth, higher studies, demonstrate leadership skills and engage in lifelong learning by active participation in the civil engineering profession.</li>
+              <li>PSO4: The graduates will be able to demonstrate professional integrity and an appreciation of ethical, environmental, regulatory and issues relative to civil engineering projects.</li></ul>		
+              
+                <!-- Faculty-->   
+                <div class="section-heading mt-30">
+                  <h5>Faculty</h5>
+              </div>
+              {% for fac in facs %}
+              <!-- Single Team Member -->
+              <a href="#" style="margin: 10px;">
+              <div class="single-team-member d-flex align-items-center">
+                  <div class="team-member-thumbnail">
+                      <img src="/faculty/{{fac[0]}}.jpg" alt="">
+                      
+                  </div>
+                  <div class="team-member-content">
+                      <h6>{{fac[1]}}</h6>
+                      <span>{{fac[2]}}</span>
+                      Qualification:-{{fac[3]}}<br>
+                         Email:- {{fac[4]}}
+                      
+                  </div>
+              </div>
+              </a>
+              {% endfor %}
+                            </div>
+                             
+
+                            
+                        </div>
+                        
+                        
+                        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                            <div class="sidebar-area bg-white mb-30 box-shadow">
+                                
+                                <div class="section-heading">
+                                    <h5>Other Links</h5>
+                                </div>
+                                <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+                                
+                                <div class="social-followers-info">
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('CV','ach')"><span>Achievements </span></button>
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('CV','infra')"><span>Infrastructure </span></button>
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('CV','research')"><span>Research </span></button>
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('CV','post')"><span>Post-Graduation </span></button>
+                                    <br>
+                                </div>
+
+                                <div class="single-sidebar-widget p-30">
+                                    <!-- Section Title -->
+                                    <div class="section-heading">
+                                        <h5>Announcements</h5>
+                                    </div>
+                                    {% if annons|length==0 %}
+                                    <div> No Announcements</div>
+                                    <hr> {% else %} {% for annon in annons %}
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex">
+                                        <div class="post-thumbnail">
+                                            <span
+                                                style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                                            {{annon[2].year}}
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                        </div>
+                                    </div>
+                        
+                                    {% endfor %}
+                                    <div><a href="/archive/CV/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+
+
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ##### About Us Area End ##### -->
+
+            {% endblock %}

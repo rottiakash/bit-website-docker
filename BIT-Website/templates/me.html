@@ -1,0 +1,171 @@
+{% extends "layout.html" %} {% block title %}Department Of Mechanical Enginnering{% endblock %} {% block content %}
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Department Of Mechanical Enginnering</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p>Department of Mechanical Engineering was started in year 1979 to impart high quality Mechanical and Technical skills to the Blooming engineers. The programs offered by the Department are recognized and approved by AICTE and is affiliated
+                        to Visvesvaraya Technological University (VTU), Belagavi, Karnataka. The department undertakes a powerful multi-step teaching and learning process that threads together the latent expertise and the talents of the students and weaves
+                        out the finest Mechanical Engineers. The strength of the department lies in its highly qualified and experienced expert teaching faculties besides its supportive, excellent non-teaching staff. To complement this is the presence
+                        of the diligent students who epitomize enthusiasm and devotion. It has been the department’s firm resolve to adapt to the modern day requirements and in the process produce erudite and conscientious Mechanical Engineers. The courses
+                        are so designed that the students do get an opportunity to be ready for industry jobs as well as to pursue higher studies in Institutes of higher learning in universities abroad. Department and the placement center provide facilities
+                        for internship recruitments from major companies in the stream of Mechanical Engineering.
+
+                    </p><br><br>
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/faculty/ME02.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Sreerama Reddy T V</h5>
+                                <p class="card-text">Professor & Head</p>
+                            </div>
+                        </div>
+                        <br><br>
+
+
+
+
+                    </div>
+                    <p>Mechanical Engineering Association (Student Body): The departing believes in creating a conducive environment for the faculty and students to work together. With this objective in mind, the Mechanical Engineering Association has been
+                        floated for greater student- faculty interaction. It is also a platform for industrial exposure through technical events, industrial visits and seminars. The association also has a library with 250 latest books.</p>
+
+                    <!-- Team Member Area -->
+                    <div class="section-heading mt-30">
+                        <h5>Vision and Mission</h5>
+                    </div>
+
+                    <h3>
+                        VISION
+                    </h3>
+                    <div>
+                        Mechanical Engineering Department Strives to Transform the Students Technically Educated, Broadly Know ledged and Competent Mechanical Engineers.
+                    </div>
+
+                    <br>
+
+                    <h3>
+                        MISSION
+                    </h3>
+                    <p>1. Create an Environment as a Center of Learning.<br> 2. Train the Staff to Ensure the Student get an Excellent Education at par with Latest Technology.<br> 3. Provide an Effective Means of Learning, Advance Knowledge, and Facilitates
+                        Personal Commitment to the Educational Success of Students<br> 4. Preparing the Students for a Productive Careers Globally.<br> 5. Inspire Hope and Contribute to Society by Providing the Best Practices.<br> 6. Prepares the Students
+                        for Research and Advanced Problem Solving Technique Needed to Address Complex Mechanical Engineering Problems<br> 7. Educate Students to become Highly Successful Alumni who Contribute to the Profession in the Global Society</p>
+                    <h3>Program Educational Objectives (PEO’s)</h3>
+                    <p>1.To prepare the students for Successful professional careers with strong fundamental knowledge in Science, Mathematics, English and Engineering Sciences so as to enable them to analyze the Mechanical Engineering related problems leading
+                        to leadership, entrepreneurship or pursuing higher education (Preparation).<br> 2. To develop ability among the students for acquiring technical knowledge in specialized areas of Mechanical Engineering such as Materials, Design,
+                        Manufacturing and Thermal Engineering with a focus on research and innovation and gaining the technical skills in classical software packages (Core competence and professionalism).<br> 3. To provide opportunities for the students
+                        to work with multidiscipline field of engineering so as to enlarge the ability among the students to understand the different industrial environments (Breadth).<br> 4. To promote the students for continuous learning, research and
+                        development with strong professional, moral and ethical values and zeal for life-long learning. (Learning environment) </p>
+                    <h3>Program Specific Outcomes</h3>
+                    <p>1: An ability that meets the needs of Industries/ society and the country in general and to synthesize data and technical concepts for application to mechanical engineering software.<br> 2 : Ability to accept new challenges for multi
+                        disciplinary projects with a sound foundation in mathematical, scientific and engineering areas necessary to achieve excellence in solving and analyzing engineering problems and to prepare for graduate studies.<br> 3: Ability to
+                        promote and develop an ambition of life-long learning and to apply them to professional ethics and codes of professional practices.</p>
+
+                    <!-- Faculty-->
+                    <div class="section-heading mt-30">
+                        <h5>Faculty</h5>
+                    </div>
+                    {% for fac in facs %}
+                    <!-- Single Team Member -->
+                    <a href="#">
+                        <div class="single-team-member d-flex align-items-center">
+                            <div class="team-member-thumbnail">
+                                <img src="/faculty/{{fac[0]}}.jpg" alt="">
+
+                            </div>
+                            <div class="team-member-content">
+                                <h6>{{fac[1]}}</h6>
+                                <span>{{fac[2]}}</span> Qualification:-{{fac[3]}}
+                                <br> Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+                <!-- Insert Faculty here  -->
+
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+
+                    <div class="section-heading">
+                        <h5>Other Links</h5>
+                    </div>
+                    <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+
+                        <div class="social-followers-info">
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ME','ach')"><span>Achievements </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ME','infra')"><span>Infrastructure </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ME','research')"><span>Research </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ME','post')"><span>Post-Graduation </span></button>
+                    <br>
+                        </div>
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Announcements</h5>
+                            </div>
+                            {% if annons|length==0 %}
+                            <div> No Announcements</div>
+                            <hr> {% else %} {% for annon in annons %}
+                            <!-- Single Blog Post -->
+                            <div class="single-blog-post d-flex">
+                                <div class="post-thumbnail">
+                                    <span
+                                        style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                                    {{annon[2].year}}
+                                </div>
+                                <div class="post-content">
+                                    <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                </div>
+                            </div>
+                
+                            {% endfor %}
+                            <div><a href="/archive/ME/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block title %}Archive {% endblock %}
+{% block content %} 
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/41.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Archive</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### Archive Post Area Start ##### -->
+<div class="archive-post-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <div class="archive-posts-area bg-white p-30 mb-30 box-shadow">
+                    {% for annon in annons %}
+                        <!-- Single Catagory Post -->
+                        <div class="single-catagory-post d-flex flex-wrap">
+                            <!-- Thumbnail -->
+                            <div class="post-thumbnail bg-img" style="font-size: xx-large;">
+                                <span style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}} {{annon[2].year}}
+                            </div>
+
+                            <!-- Post Contetnt -->
+                            <div class="post-content">
+                                <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+
+                    <!-- Pagination -->
+                    <nav>
+                        <ul class="pagination">
+                            {% for i in range(1,pages+1) %}
+                                {% if i==page %}
+                                    <li class="page-item active"><a class="page-link" href="{{i}}">{{i}}</a></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="{{i}}">{{i}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ##### Archive Post Area End ##### -->
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "layout.html" %} {% block title %}Library{% endblock %} {% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Library</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p>
+                        The BIT Library came in to existence in the year 1979 and collective support the Teaching, Research & extension programme of the institute. The central library houses a total collection of over 83605 documents and 19750 titles covering the principal field
+                        of interest.<br> The emerging, comprising of books, Print journals, E- Journals, Magazines, Standards, CD’s, Project reports etc. The operation of the library is computerized using Libsoft 9.8.0 version
+                        and also provides web based access to Online Public Access Catalogue (OPAC) of the library.<br>
+                    </p><br><br>
+
+
+
+
+                    <!-- Team Member Area -->
+                    <div class="section-heading mt-30">
+                        <h5> Vision and Mission </h5>
+                    </div>
+                    <h3>Vision</h3>
+                    <p>To incorporate the latest technology and adopt user friendly approach towards students and faculty to enriching their knowledge.</p>
+                    <h3>Mission</h3>
+                    <p>• To provide a comprehensive collection of document’s and e- resources useful for students and faculty</p>
+                    <p>• To create conducive environment for acquisition of knowledge</p>
+                    <br>
+                    <div class="section-heading mt-30">
+                        <h5> Contact Us </h5>
+                    </div>
+                    <p>
+                        Library and Information Center,<br> Bangalore Institute of Technology,<br> KR Road, Bangalore – 4<br> e-mail:
+                        <a href="mailto:bitlibrary79@rediffmail.com"> bitlibrary79@rediffmail.com</a><br></p>
+
+                    <!-- Faculty-->
+                    <div class="section-heading mt-30">
+                        <h5>Library Staff</h5>
+                    </div>
+                    {% for fac in facs %}
+                    <!-- Single Team Member -->
+                    <a href="#" style="margin: 10px;">
+                        <div class="single-team-member d-flex align-items-center">
+                            <div class="team-member-thumbnail">
+                                <img src="/faculty/{{fac[0]}}.jpg" alt="">
+
+                            </div>
+                            <div class="team-member-content">
+                                <h6>{{fac[1]}}</h6>
+                                <span>{{fac[2]}}</span>
+
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+
+                    <div class="section-heading">
+                        <h5>Other Links</h5>
+                    </div>
+                    <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+
+                        <div class="social-followers-info">
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('LIB','other')"><span>Other Info </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('LIB','infra')"><span>Infrastructure </span></button>
+
+                            <br>
+                        </div>
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Announcements</h5>
+                            </div>
+                            {% if annons|length==0 %}
+                            <div> No Announcements</div>
+                            <hr> {% else %} {% for annon in annons %}
+                            <!-- Single Blog Post -->
+                            <div class="single-blog-post d-flex">
+                                <div class="post-thumbnail">
+                                    <span style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}} {{annon[2].year}}
+                                </div>
+                                <div class="post-content">
+                                    <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            <div><a href="/archive/LIB/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+
+
+{% endblock %}

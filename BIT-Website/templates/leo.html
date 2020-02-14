@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+{% block title %}Clubs {% endblock %}
+{% block content %}
+<style>
+    div.polaroid {
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    width: 80%;
+    background-color:#1abc9c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    }
+
+
+    div.container {
+    text-align: center;
+    padding: 10px 20px;
+    }
+    @media screen and (max-width: 300px){
+        .container {
+            font-size: 11px
+        }
+    }
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>CLUBS OF BIT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Leo CLub</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Leo Club Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- Leo Club Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h2>Leo Club</h2>
+                        </div>
+                        <p style="text-align: center;"><img class="size-full wp-image-169 aligncenter" src="\img\club-img\leo1.png" alt="" width="173" height="214">
+                            <p style="text-align: justify;">Leo club is a branch of the Lions Club which mainly aims at positive youth development. The Club aims To provide the youth of the world with an opportunity for development and contribution, individually and collectively, as responsible members of the local, national and international community.Leo Clubs much like Lioness Clubs are sponsored by a parent Lions Club.</p>
+                            <h5 style="text-align: left;">Objective</h5>
+                            <p style="text-align: justify;">To provide the youth of the world with an opportunity for development and contribution, individually and collectively, as responsible members of the local, national and international community.</p>
+                            <h5 style="text-align:left;">Our Motto</h5>
+                            <p style="text-align: left;">
+                                Leadership – Develop skills as a project organizer, time manager and team leader.<br>
+                                Experience – Learn how teamwork, cooperation and collaboration can bring exciting changes to your community and the world.<br>
+                                Opportunity – Make friends and feel the rewards of community service.<br>
+                            </p>
+                            <div class="polaroid">
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo2.png" alt="1st image" style="width:400px;height:200px"">
+                                    <div class="container">Run for Hunger Event arranged by Leo Club in association with Lions Club </div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo3.png"  alt="2nd image" style="width:400px;height:200px">
+                                    <div class="container">7 A Side Mini Cricket Event Ad</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo4.png"  alt="3rd image" style="width:400px;height:200px">
+                                    <div class="container">Planting over 600 tree saplings inaugrated by renowned artist Shri Ashok</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo5.png"  alt="4th image" style="width:400px;height:200px">
+                                    <div class="container">Support provided to Coorg Floods by collecting donations</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo6.png"  alt="5th image" style="width:400px;height:200px">
+                                    <div class="container">Blood Donation Camp</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\leo7.png"  alt="5th image" style="width:400px;height:200px">
+                                    <div class="container">Team Leo</div>
+                                </div>
+                            </div>    
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="sidebar-area bg-white mb-30 box-shadow">
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Social Followers Info -->
+                            <div class="social-followers-info">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/leoclubbit/" class="instagram-followers"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+                                <!-- Facebook-->
+                                <a href="https://facebook.com/LEOCLUBBIT/" class="facebook-fans"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+    {% endblock %}

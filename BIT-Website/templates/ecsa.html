@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+{% block title %}Clubs {% endblock %}
+{% block content %}
+
+<style>
+    div.polaroid {
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    width: 80%;
+    background-color:#1abc9c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    }
+
+    .mySlides
+    {
+        display: none;
+        
+    }
+    div.container {
+    text-align: center;
+    padding: 10px 20px;
+    }
+    @media screen and (max-width: 300px){
+        .container {
+            font-size: 11px
+        }
+    }
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>CLUBS OF BIT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ECSA</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### ECSA Club Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- ECSA Club Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h2>Electronics and Communication Student's Association</h2>
+                        </div>
+                        <p style="text-align: center;"><img class="size-full wp-image-169 aligncenter" src="\img\club-img\ecsa1.jpg" alt="" width="173" height="214">
+                            <p style="text-align: justify;">Electronics and Communication Student’s Association is an active technocultural
+                                club of BIT with the key motive to benefit the students in various academic and
+                                co-curricular aspects Started in the year 2002, ECSA’s mission is to create an
+                                interactive student community within the college by coordinating innovative programs
+                                promoting research, networking and collaborative opportunities.</p>
+                            <div class="polaroid">
+                                <div class="mySlides">
+                                    <img src="\img\club-img\ecsa2.png" alt="1st image" style="width:400px;height:200px">
+                                    <div class="container">Workshop on Hand Gesture Controlled Bot</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\ecsa3.png"  alt="2nd image" style="width:400px;height:200px">
+                                    <div class="container">Minerva Techno Cultural Quiz Event</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\ecsa4.png"  alt="3rd image" style="width:400px;height:200px">
+                                    <div class="container">Robotron event Ad</div>
+                                </div> 
+                                <div class="mySlides">
+                                    <img src="\img\club-img\ecsa5.png"  alt="4th image" style="width:400px;height:200px">
+                                    <div class="container">Sincrona event 2k16</div>
+                                </div>
+                            </div>  
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="sidebar-area bg-white mb-30 box-shadow">
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Social Followers Info -->
+                            <div class="social-followers-info">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/ecsa2k__/" class="instagram-followers"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+                                <!-- Facebook-->
+                                <a href="https://facebook.com/ecsa.bit/" class="facebook-fans"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+    {% endblock %}

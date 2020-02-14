@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>{% block title %}TITLE{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/core-img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/core-img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/core-img/favicon-16x16.png">
+    <link rel="icon" href="/img/core-img/favicon.ico">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/modernizr-custom.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <img src="/img/core-img/logo.png" style="width: 120px;" alt="">
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <div class="bit-header" style="background-color: white;">
+            <a href="/" class="nav-brand col-sm-1 bit-header" style="position: absolute;;left:50px;top: 20px;z-index: 1000;"><img src="/img/core-img/logo.png" style="width: 120px;" alt=""></a>
+            <a href="http://rvsangha.org" class="nav-brand col-sm-1 bit-header" style="position: absolute;;right:50px;top: 20px;z-index: 1000;"><img src="/img/core-img/vs.png" style="width: 120px;" alt=""></a>
+            <div class="d-flex justify-content-center bit-header"> Rajya Vokkaligara Sangha</div>
+            <div class="d-flex justify-content-center bit-header" style="font-size: xx-large;"> BANGALORE INSTITUTE OF TECHNOLOGY</div>
+            <div class="d-flex justify-content-center bit-header">Affiliated to Visveshvaraya Technological University</div>
+            <div class="d-flex justify-content-center bit-header">Approved By AICTE, New Delhi, Accredited By NBA, New Delhi</div>
+
+        </div>
+        <!-- Navbar Area -->
+        <div class="mag-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off row">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="magNav">
+                    <!-- Nav brand -->
+
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler" style="position:absolute;right: 20px;">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Nav Content -->
+                    <div class="nav-content d-flex align-items-center justify-content-center col-sm-12 my-auto">
+                        <a href="/" class="nav-brand col-sm-1 mob-logo" style="position:fixed;left:10px;"><img src="/img/core-img/logo.png" style="width: 50px;" alt=""></a>
+                        <div class="mob-logo" style="position: fixed;left: 75px;font-size: small;cursor: pointer;" onclick="goHome()">BANGALORE INSTITUTE OF TECHNOLOGY</div>
+
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="/">Home</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li class="active"><a href="/placement">Placements</a></li>
+                                    <!-- <li><a href="archive.html">Archive</a></li> -->
+                                    <li><a href="#">Clubs</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/club/aikya">Aikya</a></li>
+                                            <li><a href="/club/voice">Voice</a></li>
+                                            <li><a href="/club/tedx">TedX</a></li>
+                                            <li><a href="/club/sports">Sports</a></li>
+                                            <li><a href="/club/shuttered">Shuttered</a></li>
+                                            <li><a href="/club/samskriti">Samskriti</a></li>
+                                            <li><a href="/club/rotract">Rotract</a></li>
+                                            <li><a href="/club/robolution">Robolution</a></li>
+                                            <li><a href="/club/leo">Leo</a></li>
+                                            <li><a href="/club/elevate">Elevate</a></li>
+                                            <li><a href="/club/edc">EDC</a></li>
+                                            <li><a href="/club/ecsa">ECSA</a></li>
+                                            <li><a href="/club/eco">ECO</a></li>
+                                            <li><a href="/club/dance">Dance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Departments</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Undergraduate</a></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <hr>
+                                                    </a>
+                                                </li>
+                                                <li><a style="font-size: 10px;" href="/department/CV">Civil Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/ME">Mechanical Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/EEE">Electrical and Electronics Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/ECE">Electronics and Communication Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/CSE">Computer Science and Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/IEM">Industrial Engineering and Management</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/ISE">Information Science & Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/EIM">Electronics and Instrumentation Engineering</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/TELE">Electronics and Telecommunication Engineering</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Basic Science</a></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <hr>
+                                                    </a>
+                                                </li>
+                                                <li><a style="font-size: 10px;" href="/department/PHY">Physics</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/CHE">Chemistry</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/MAT">Mathematics</a></li>
+
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Postgraduate</a></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <hr>
+                                                    </a>
+                                                </li>
+                                                <li><a style="font-size: 10px;" href="/department/MBA">Department of Management Studies-MBA</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/MCA">MCA</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a style="font-size: 10px;" href="/department/LIB">Library</a></li>
+                                                <li><a style="font-size: 10px;" href="/department/SPO">Sports</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/staff">Staff Corner</a></li>
+                                    <li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Frli%3D19h8i5r2k1tsp%26rld%3D1&amp;service=mail&amp;hd=bit-bangalore.edu.in&amp;sacu=1&amp;flowName=GlifWebSignIn&amp;flowEntry=AddSession">WebMail</a></li>
+                                    <li><a href="#">Quick Links</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#" style="font-size: 10px;"  data-toggle="modal" data-target="#popup" onclick="getRes('HOME','audit')">Audit Statement</a></li>
+                                            <li><a href="#" style="font-size: 10px;" data-toggle="modal" data-target="#popup" onclick="getRes('HOME','policies')">Policies of BIT</a></li>
+                                            <li><a href="/documents/NCC-NSS-1.pdf" style="font-size: 10px;">NCC-NSS Committee</a></li>
+                                            <li><a href="#" style="font-size: 10px;" data-toggle="modal" data-target="#popup" onclick="getRes('HOME','mandatory')">Mandatory Committies</a></li>
+                                            <li><a href="/documents/PBF_website_final.pdf" style="font-size: 10px;">Professional Bodies Fourm</a></li>                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    {% block content %} CONTENT {% endblock %}
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <!-- Logo -->
+                        <a href="index.html" class="foo-logo"><img src="/img/core-img/logo.png" alt=""></a>
+                        <div class="footer-social-info">
+                            <a href="https://www.facebook.com/bitsince1979/" class="facebook"><i class="fa fa-facebook"></i></a>
+                            
+                            <a href="https://www.instagram.com/bitsince1979/" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/bitsince1979" class="twitter"><i class="fa fa-twitter"></i></a>
+                     
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">See More</h6>
+                        <nav class="footer-widget-nav">
+                            <ul>
+                                <li><a href="/about"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About</a></li>
+                                <li><a href="/placement"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Placements</a></li>
+                                <li><a href="/contact"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact</a></li>
+                                <li><a href="/staff"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Staff Corner</a></li>
+                                <li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Frli%3D19h8i5r2k1tsp%26rld%3D1&amp;service=mail&amp;hd=bit-bangalore.edu.in&amp;sacu=1&amp;flowName=GlifWebSignIn&amp;flowEntry=AddSession"><i class="fa fa-angle-double-right" aria-hidden="true"></i> WebMail</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Departments</h6>
+                        <ul class="footer-tags">
+                            <li><a href="/department/CV">Civil</a></li>
+                            <li><a href="/department/ME">Mechanical</a></li>
+                            <li><a href="/department/EEE">Electrical and Electronics</a></li>
+                            <li><a href="/department/ECE">Electronics and Communication</a></li>
+                            <li><a href="/department/CSE">Computer Science</a></li>
+                            <li><a href="/department/IEM">Industrial Engg.</a></li>
+                            <li><a href="/department/ISE">Information Science</a></li>
+                            <li><a href="/department/EIM">Electronics and Instrumentation</a></li>
+                            <li><a href="/department/TELE">Telecommunication</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="copywrite-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-sm-6">
+                        <p class="copywrite-text">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Advertisement</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        @media only screen and (max-width: 768px) {
+            .modal-dialog {
+                overflow-y: scroll;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            .modal-content {
+                width: 100vw;
+                overflow-y: scroll;
+            }
+        }
+    </style>
+    <!-- ##### Footer Area End ##### -->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="popup" aria-hidden="true" style="z-index: 1000;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+
+                <div class="modal-body" id="popup-content">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/js/jquery.visible.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
+    <!-- Custom Script-->
+    <script src="/js/app.js"></script>
+    <script>
+        ScrollReveal().reveal('.company', {
+            duration: 1200,
+            interval: 10,
+            delay: 500
+        });
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAmdjbKw9yVq5U46fSowgnh5YRhyEjvTO0",
+            authDomain: "bit-website-7e8d1.firebaseapp.com",
+            databaseURL: "https://bit-website-7e8d1.firebaseio.com",
+            projectId: "bit-website-7e8d1",
+            storageBucket: "bit-website-7e8d1.appspot.com",
+            messagingSenderId: "406376313402",
+            appId: "1:406376313402:web:2268053113f4af1b393b03",
+            measurementId: "G-J5NMQ55KW4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+
+</html>

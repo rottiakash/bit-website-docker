@@ -1,0 +1,138 @@
+{% extends "layout.html" %} {% block title %}DEPARTMENT OF PHYSICS{% endblock %} {% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>DEPARTMENT OF PHYSICS</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p>
+                        The Department of Engineering Physics came into existence along with the establishment of the institution in the year 1979. The department is currently headed by Dr. D. Nagaraja, who is assisted by a team of well qualified and dedicated staff members.
+                        The Physics department has a staff of 7 members of which 3 members have more than 25 years of teaching experience. The students are given individual attention in the lab classes. The results in both theory and practical examinations
+                        have been consistently good. Several workshops/conferences sponsored by Indian Academy of Sciences, KSCST and Rajya Vokkaligara Sangha, are constantly organized. Infrastructure: Engineering Physics laboratory has well equipped
+                        with basic infrastructure and instruments. It has main laboratory = 115.15 m2, optics laboratory = 27.85. m2, and store room= 24.14 m2.<br>
+                    </p><br><br>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/faculty/PHY01.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. D. Nagaraja, MSc, Mphill, Ph.D</h5>
+                                <p class="card-text">Professor and HOD
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Team Member Area -->
+                    <div class="section-heading mt-30">
+                        <h5> Vision and Mission </h5>
+                    </div>
+                    <h3>VISION</h3>
+                    <p>Instill the spirit of Scientific Curiosity in both the teacher and the taught</p>
+                    <h3>MISSION</h3>
+                    <p>1. A science club with multi varied activities<br> 2. Institute an extracurricular demonstration room where the students can build and have hands on experience on topics/ experiments not included in the syllabus<br> 3. Bring Monthly
+                        bulletin on recent developments in SCIENCE & TECHNOLOGY and Organize workshop/conferences on science related topics<br> 4. Organize workshop/conferences on science related topics<br>
+                    </p>
+                    <br>
+
+                    <!-- Faculty-->
+                    <div class="section-heading mt-30">
+                        <h5>Faculty</h5>
+                    </div>
+                    {% for fac in facs %}
+                    <!-- Single Team Member -->
+                    <a href="#">
+                        <div class="single-team-member d-flex align-items-center">
+                            <div class="team-member-thumbnail">
+                                <img src="/faculty/{{fac[0]}}.jpg" alt="">
+
+                            </div>
+                            <div class="team-member-content">
+                                <h6>{{fac[1]}}</h6>
+                                <span>{{fac[2]}}</span> Qualification:-{{fac[3]}}
+                                <br> Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+
+                    <div class="section-heading">
+                        <h5>Other Links</h5>
+                    </div>
+                    <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+
+                        <div class="social-followers-info">
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('PHY','research')"><span>Research </span></button>
+
+                            <br>
+                        </div>
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Announcements</h5>
+                            </div>
+                            {% if annons|length==0 %}
+                            <div> No Announcements</div>
+                            <hr> {% else %} {% for annon in annons %}
+                            <!-- Single Blog Post -->
+                            <div class="single-blog-post d-flex">
+                                <div class="post-thumbnail">
+                                    <span style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}} {{annon[2].year}}
+                                </div>
+                                <div class="post-content">
+                                    <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            <div><a href="/archive/PHY/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                            </div>
+                            {% endif %}
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+{% block title %} Clubs {% endblock %}
+{% block content %}
+
+<style>
+    .mySlides {display:none;}
+    div.polaroid {
+        margin-left:auto;
+        margin-right:auto;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+          width: 80%;
+          background-color:#1abc9c;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          margin-bottom: 25px;
+
+}
+    div.container {
+  text-align: center;
+  padding: 10px 20px;
+        color: white;
+}
+
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="container">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class  ="breadcrumb-content">
+                        <h2>CLUBS OF BIT</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- About Us Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h3>Eco Club</h3>
+                        </div>
+ <p style="text-align: center;"><img class="size-full wp-image-169 aligncenter" src="\img\club-img\eco_logo.jpg" alt="" width="173"  height="214">
+                        <p >The ECO CLUB of B.I.T. is the representation of a gathering of
+active pro-nature participants. Having organized events ranging from plantation program’s to volleyball in the previous term, our dynamic new team is headed towards
+stepping up the events to be organizedin the following term.</p>
+                    </p>
+                        <div class="polaroid">
+
+                               <div class="mySlides">
+                          <img src="/img/club-img/eco1.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">Plantation drive in college
+                          </div>
+                               </div>
+                                   <div class="mySlides">
+                          <img src="/img/club-img/eco2.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">Plantation drive in college
+                          </div>
+                                   </div>
+
+                               <div class="mySlides">
+                          <img src="/img/club-img/eco3.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">
+                          Plantation drive in college
+                          </div>
+                               </div>
+                           <div class="mySlides">
+                          <img src="/img/club-img/eco4.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">Swachh BIT program
+                          </div>
+                                   </div>
+                           <div class="mySlides">
+                          <img src="/img/club-img/eco5.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">Creating awareness to reduce plastic bag use
+                          </div>
+                                   </div>
+
+                          <div class="mySlides">
+                          <img src="/img/club-img/eco6.jpg" alt="trying" style="width:400px;height:200px">
+                                   <div class="container">Plantation drive
+                          </div>
+                                   </div>
+
+                        </div>
+
+
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+
+                            </div>
+                        </div>
+                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="sidebar-area bg-white mb-30 box-shadow">
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Social Followers Info -->
+                            <div class="social-followers-info">
+                                <!-- Facebook -->
+                                <a href="https://facebook.com/BITecoclub" class="facebook-fans"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/eco_club_bit_/?hl=en" class="instagram-followers"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+
+}
+</script>
+    {% endblock %}

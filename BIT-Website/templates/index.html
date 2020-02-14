@@ -1,0 +1,298 @@
+{% extends "layout.html" %} {% block title %}Banglore Institute of Technology {% endblock %} {% block content %}
+<script>
+    Modernizr.on('webp', function (result) {
+        if (result) {
+            console.log("Webp Supported")
+        } else {
+            console.log("Webp not supported")
+        }
+    });
+</script>
+<style>
+    .webp .slide1 {
+        background-image: url(/img/bg-img/1.jpg); /* TODO:Use WEBP */
+    }
+
+    .no-webp .slide1 {
+        background-image: url(/img/bg-img/1.jpg);
+    }
+
+    .webp .slide2 {
+        background-image: url(/img/bg-img/comp.gif);
+    }
+
+    .no-webp .slide2 {
+        background-image: url(/img/bg-img/comp.gif);
+    }
+</style>
+<!-- ##### Hero Area Start ##### -->
+<div class="hero-area owl-carousel">
+    <!-- Single Blog Post -->
+    <div class="hero-blog-post bg-img  slide1">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Post Contetnt -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Blog Post -->
+    <div class="hero-blog-post bg-img bg-overlay slide2">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Post Contetnt -->
+                    <div class="post-content text-center">
+
+                        <a href="./placement" class="post-title" data-animation="fadeInUp" data-delay="300ms">BIT HAS
+                            100% PLACEMENT RECORD</a>
+                        <a href="./placement" class="sub-text" data-animation="bounceIn" data-delay="500ms">Learn More
+                            About Placements</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- ##### Hero Area End ##### -->
+
+<!-- ##### Mag Posts Area Start ##### -->
+<section class="mag-posts-area d-flex flex-wrap">
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+    <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+        <!-- Sidebar Widget -->
+        <div class="single-sidebar-widget p-30">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Announcements</h5>
+            </div>
+            {% if annons|length==0 %}
+            <div> No Announcements</div>
+            <hr> {% else %} {% for annon in annons %}
+            <!-- Single Blog Post -->
+            <div class="single-blog-post d-flex">
+                <div class="post-thumbnail">
+                    <span
+                        style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                    {{annon[2].year}}
+                </div>
+                <div class="post-content">
+                    <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                </div>
+            </div>
+
+            {% endfor %}
+            <div><a href="./archive/GEN/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+        <div class="section-heading">
+            <h5>Welcome</h5>
+        </div>
+        <p style="font-size: large;color: black;">Bangalore Institute of Technology (BIT) was started in the year 1979
+            with the objective of providing quality education in the ﬁeld of Technology and thereby serving the society.
+            It has reached enviable level of excellence in technical education.
+            This was achieved due to the unconditional support of Rajya Vokkaligara Sangha, committed staff and
+            students. The environment of BIT motivates the student to quench their thirst for knowledge. The college
+            thrives to achieve the all-round development
+            of the students.<br><br> BIT has always been at the forefront of modern technology and has the distinction
+            of being the ﬁrst College to introduce a full-ﬂedged degree in Computer Science and Engineering in
+            Karnataka. The institute has visualized the
+            areas of future growth and incorporated various courses over the years. At present BIT has 9 undergraduate,
+            10 post graduate and 13 research centers. BIT has an annual intake of 1300 students. There are a number of
+            centers carrying out inter-disciplinary
+            research and many collaborative programs exist between the college and other professional institutions, like
+            IISc, NAL. The Chemistry department has been recognized as one of the latest research centers in Karnataka.
+            BIT also has the acclaim
+            of being the Study center for IGNOU programmes.<br><br> BIT is proud to say that it has 289 faculty members
+            with excellent knowledge and teaching caliber. 83 faculty members have PhD degree and 71 are pursuing PhD.
+            Sixty percent of faculty members
+            have served BIT for more than twenty years. The Institution has 294 efficient and committed team of
+            supporting staff.</p>
+            <video width="100%" height="500" autoplay muted loop style="object-fit: fill;" id="v1">
+              Your browser does not support the video tag.
+              </video>
+        <!-- Trending Now Posts Area -->
+        <div class="trending-now-posts mb-30" style="padding-top: 30px;">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>ACCREDITATIONS</h5>
+            </div>
+
+
+            <div class="trending-post-slides owl-carousel">
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture style="height: 300px;">
+                        <source type="image/webp" srcset="/img/new-img/nba.webp">
+                        <source type="image/png" srcset="/img/new-img/nba.png">
+                        <img src="/img/new-img/nba.png">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture style="height: 300px;">
+                        <source type="image/webp" srcset="/img/new-img/naac.webp">
+                        <source type="image/png" srcset="/img/new-img/naac.png">
+                        <img src="/img/new-img/naac.png">
+                    </picture>
+                    <div class="post-content">
+
+                       
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture style="height: 300px;">
+                        <source type="image/webp" srcset="/img/new-img/nirf.webp">
+                        <source type="image/jpg" srcset="/img/new-img/nirf.png">
+                        <img src="/img/new-img/nirf.jpg">
+                    </picture>
+                    <div class="post-content">
+
+                      
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="trending-now-posts mb-30" style="padding-top: 30px;">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Our Recruiters</h5>
+            </div>
+
+
+            <div class="trending-post-slides owl-carousel">
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture>
+                        <source type="image/webp" srcset="/img/new-img/google.webp">
+                            <source type="image/png" srcset="/img/new-img/google.png">
+                            <img src="/img/new-img/google.png">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture>
+                        <source type="image/webp" srcset="/img/new-img/ms.webp">
+                            <source type="image/jpg" srcset="/img/new-img/ms.jpg">
+                            <img src="/img/new-img/ms.jpg">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture>
+                        <source type="image/webp" srcset="/img/new-img/amazon.webp">
+                            <source type="image/jpg" srcset="/img/new-img/amazon.jpg">
+                            <img src="/img/new-img/amazon.jpg">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <picture>
+                        <source type="image/webp" srcset="/img/new-img/cisco.webp">
+                            <source type="image/png" srcset="/img/new-img/cisco.png">
+                            <img src="/img/new-img/cisco.png">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+
+                 <!-- Single Trending Post -->
+                 <div class="single-trending-post">
+                    <picture>
+                        <source type="image/webp" srcset="/img/new-img/intel.webp">
+                            <source type="image/png" srcset="/img/new-img/intel.png">
+                            <img src="/img/new-img/intel.png">
+                    </picture>
+                    <div class="post-content">
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Right Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+    <div class="post-sidebar-area right-sidebar mt-30 mb-30 box-shadow">
+
+
+      
+        <!-- Sidebar Widget -->
+        <div class="single-sidebar-widget p-30">
+            <div class="section-heading">
+                <h5>Social Media</h5>
+            </div>
+            <!-- Social Followers Info -->
+            <div class="social-followers-info">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/bitsince1979/" class="facebook-fans"><i
+                        class="fa fa-facebook"></i><span>Facebook</span></a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/bitsince1979" class="twitter-followers"><i
+                        class="fa fa-twitter"></i><span>Twitter</span></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/bitsince1979/" class="instagram-followers"><i
+                        class="fa fa-instagram"></i> <span>Instagram</span></a>
+            </div>
+        </div>
+
+               <!-- Sidebar Widget -->
+               <div class="single-sidebar-widget p-30">
+                <div class="section-heading">
+                    <h5>Other Links</h5>
+                </div>
+                <!-- Buttons -->
+
+                    <button class="btn" id="nalumni"><span>Notable Alumni</span></button>
+                    <button class="btn" id="alumni"><span>ALUMINI </span></button>
+                    <button class="btn" id="cal"><span>Calendar of Events </span></button>
+                    <br>
+
+            </div>
+
+    </div>
+</section>
+<!-- ##### Mag Posts Area End ##### -->
+
+{% endblock %}

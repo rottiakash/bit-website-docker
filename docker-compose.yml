@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'admin123'
+    volumes: 
+      - ./dbdata:/var/lib/mysql
+    networks: 
+      - database
+  back:
+    image: rottiakash/bit-backend
+    volumes: 
+      - ./BIT-Website:/app
+    networks: 
+      - database
+      - bit
+    depends_on: 
+      - "database"
+
+  loadbal:
+    image: rottiakash/bit-loadbal
+    networks: 
+      - bit
+    volumes: 
+      - ./BIT-Website/bit.sock:/app/bit.sock
+      - ./BIT-Website/static:/static
+    ports: 
+      - 80:80
+    depends_on: 
+      - "back"
+      - "database"
+networks: 
+  bit:
+  database:

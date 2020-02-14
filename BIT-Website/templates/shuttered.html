@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% block title %}Clubs {% endblock %}
+{% block content %}
+
+<style>
+    div.polaroid {
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    width: 80%;
+    background-color:#1abc9c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    }
+
+    .mySlides
+    {
+        display: none;
+        
+    }
+    div.container {
+    text-align: center;
+    padding: 10px 20px;
+    }
+    @media screen and (max-width: 300px){
+        .container {
+            font-size: 11px
+        }
+    }
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2>CLUBS OF BIT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shuttered BIT</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Shuttered Club Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- Shuttered Club Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h2>Shuttered BIT</h2>
+                        </div>
+                        <p style="text-align: center;"><img class="size-full wp-image-169 aligncenter" src="\img\club-img\shuttered1.png" alt="" width="173" height="214">
+                            <p style="text-align: justify;">The club has been started around the year 2011 by the photography enthusiasts of our college.
+                                The club has actively participated in covering all the events including the ROTAFEST 2K17 and the events of LEO CLUB too. 
+                                The club has covered all the events organized during the College Fest-MANTHAN in the
+                                year 2018-19. The Club aims to bring out the Creative Photographers in Everyone and
+                                to build a Community Of Like Minded Photographers. Shuttered club conducts Photo
+                                walks helping them to develop their skills to create a community of likeminded people.</p>
+                            <div class="polaroid">
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered2.png" alt="1st image" style="width:400px;height:200px">
+                                    <div class="container">Team Shuttered</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered3.png"  alt="2nd image" style="width:400px;height:200px">
+                                    <div class="container">Sanjith Hegde Concert</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered4.png" alt="3rd image" style="width:400px;height:200px">
+                                    <div class="container">Sports Club Inaugration</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered5.png" alt="4th image" style="width:400px;height:200px">
+                                    <div class="container">Glimpse of Kannada Rajyotsava</div>
+                                </div> 
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered6.png" alt="5th image" style="width:400px;height:200px">
+                                    <div class="container">Glimpse of Kannada Rajyotsava</div>
+                                </div> 
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered7.png" alt="6th image" style="width:400px;height:200px">
+                                    <div class="container">Ganesh Utsav 2k19</div>
+                                </div>
+                                <div class="mySlides">
+                                    <img src="\img\club-img\shuttered8.png" alt="7th image" style="width:400px;height:200px">
+                                    <div class="container">Manthan 2k19</div>
+                                </div>
+                            </div>  
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="sidebar-area bg-white mb-30 box-shadow">
+                        <!-- Sidebar Widget -->
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Social Followers Info -->
+                            <div class="social-followers-info">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/shuttered_bit/" class="instagram-followers"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+                                <!-- Facebook-->
+                                <a href="https://facebook.com/bit.shuttered/" class="facebook-fans"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+    {% endblock %}

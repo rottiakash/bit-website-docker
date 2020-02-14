@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %} Announcement {% endblock %}
+ {% block content %}
+
+
+<div style="background-color:black;">
+<!-- ##### Post Details Area Start ##### -->
+<section class="post-details-area" style="padding-top: 100px;" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Post Details Content Area -->
+            <div class="col-12 col-xl-8">
+                <div class="post-details-content bg-white mb-30 p-30 box-shadow">
+                    
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <a href="#">{{myresult[2].strftime('%d-%b-%Y')}}</a>
+                        </div>
+                        <h4 class="post-title">{{myresult[1]}}</h4>
+
+                       <p>{{myresult[3]}}</p>
+                       
+                       {% if docs|length>0 %}
+                       <hr>
+                       <div class="section-heading">
+                        <h5>Attachments</h5>
+                    </div>
+                       {% endif %}
+                      {% for doc in docs %}
+                      <a href="/docs/{{doc[1]}}"> <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/534px-PDF_file_icon.svg.png"  style="width:10%;padding-bottom: 10px;">
+                        <figcaption>{{doc[1]}}</figcaption>
+                      </figure></a><hr>
+                      {% endfor %}
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- ##### Post Details Area End ##### -->
+{% endblock%}

@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+{% block title %}Department of Management Studies-MBA{% endblock %}
+{% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Department of Management Studies-MBA</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p >
+                        The Department of Management Studies-MBA was established in the year 2006. Providing a supply of quality manpower for the industry, the MBA Department ensures that all the MBA students are well equipped with skill to face the industry challenges with their prior campus experience.<br>
+
+                        We have highly qualified faculty members to train the students in managerial and communication skills aspiring to achieve the target of placement performance to competent students. In addition to this, the MBA department also arranges guest lectures by industry, offering research activities and eminent academicians to enhance the knowledge of students to make them ready for their corporate life.<br>
+                    </p><br><br>
+                        
+                                <div class="d-flex justify-content-center"><div class="card" style="width: 18rem;">
+                                    <img src="/faculty/MBA01.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dr.K.Mahesh</h5>
+                                        <p class="card-text">Associate Professor & Head
+                                            </p>
+                                        </div>
+                                    </div></div> <br><br>
+                                    <p>
+                                    1. The Department of Management Studies (MBA), BIT affiliated to V.T.U & approved by AICTE was incepted in the year 2006 with a vision to evolve as one of the India’s premier management institutes to promote knowledge through research, for both men & women pursuing careers in management. The mission of the department is to nurture & develop the talents of management students & also to create applicable knowledge in order to support social & economic advancement. At present the department has an approved intake of sixty students & is offering specializations in the areas of Marketing, Human Resource & Finance. The strength of the department lies with the knowledge base-competent faculties from inter-disciplinary fields.<br><br>
+
+                                    2. Making the new beginning the department is continuously defining strategies & focusing on its destination. With the advent of new paradigms in business & academics, the department is building on our strengths & assets to create new relationships & synergies. The future prospect of the department is to collaborate with the industry, facilitate entrepreneurship development cell, introduce student exchange programmes, offer management development programmes, and establish joint ventures with institutes in developing countries, to build research links & promote national & international case writing.<br></p>
+                            
+                            <!-- Team Member Area -->
+                            <div class="section-heading mt-30">
+                               <h5> Vision and Mission </h5>
+                            </div>
+                            <h3>VISION</h3>
+                            <p>We endeavor to be distinguished business school focused on leadership, innovation and entrepreneurship.</p>
+                            <h3>MISSION</h3>
+                            <ul style="padding-left: 20px;">
+                                <li> 1. To emphasis on the relevance and innovation in curriculam, instructional methods and research activities.</li>
+
+                                <li> 2. To create world-class, socially responsible, creative leaders and managers.</li>
+                                
+                                <li> 3. To develop all round personality of students by instilling values, passion and to have caring attitude for Human values.</li>
+                                
+                                <li> 4. To provide high standard of professional, ethical conduct and a climate that fosters continuous improvement.</li>
+                                
+                                <li> 5. To have partnership with our internal and external constituencies to provide a lifelong return on investment for our students and alumni.</li>
+                            </ul>
+                            <h3>PEOs</h3>
+                            <ul style="padding-left: 20px;">
+                                <p>
+                                1. To gain knowledge of critical functions of business<br>
+
+2. To enhance quantitative skills necessary to analyze a firm’s quantifiable numerical data and to make intelligent and effective decisions.<br>
+
+3. To understand the techniques and tools useful for financial analysis and control of national and global environments.<br></p>
+                            </ul>
+                            <h3>PSOs</h3>
+                            <ul style="padding-left: 20px;">
+                                <p>
+                                	
+Graduates of the Master of Business Administration degree program will be able to:<br>
+
+1. Communicate effectively in a variety of formats<br>
+
+2. Identify the key issues facing a business or business subdivision<br>
+
+3. Utilize qualitative and quantitative methods to investigate and solve critical business problems<br>
+
+4. Integrate tools and concepts from multiple functional areas (i.e. finance, marketing, operations, etc.) to solve business problems<br></p>
+                            </ul>
+                            <br>
+     
+                                    <!-- Faculty-->   
+                                  <div class="section-heading mt-30">
+                                    <h5>Faculty</h5>
+                                </div>
+                                {% for fac in facs %}
+                                <!-- Single Team Member -->
+                                <a href="#" >
+                                <div class="single-team-member d-flex align-items-center">
+                                    <div class="team-member-thumbnail">
+                                        <img src="/faculty/{{fac[0]}}.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="team-member-content">
+                                        <h6>{{fac[1]}}</h6>
+                                        <span>{{fac[2]}}</span>
+                                        Qualification:-{{fac[3]}}<br>
+                                           Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+                                        
+                                    </div>
+                                </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                           
+                    
+                            
+                        </div>
+                        
+                        
+                        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                            <div class="sidebar-area bg-white mb-30 box-shadow">
+                                
+                                <div class="section-heading">
+                                    <h5>Other Links</h5>
+                                </div>
+                                <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+                                
+                                <div class="social-followers-info">
+                                    <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('MBA','other')"><span>Other Info </span></button>
+                                    
+                                    <br>
+                                </div>
+                                <div class="single-sidebar-widget p-30">
+                                    <!-- Section Title -->
+                                    <div class="section-heading">
+                                        <h5>Announcements</h5>
+                                    </div>
+                                    {% if annons|length==0 %}
+                                    <div> No Announcements</div>
+                                    <hr> {% else %} {% for annon in annons %}
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex">
+                                        <div class="post-thumbnail">
+                                            <span
+                                                style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                                            {{annon[2].year}}
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                        </div>
+                                    </div>
+                        
+                                    {% endfor %}
+                                    <div><a href="/archive/MBA/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ##### About Us Area End ##### -->
+        
+           
+            {% endblock %}

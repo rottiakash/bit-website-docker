@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+{% block title %}DEPARTMENT OF ELECTRICAL & ELECTRONICS ENGINEERING{% endblock %}
+{% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>DEPARTMENT OF ELECTRICAL & ELECTRONICS ENGINEERING</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p >The department of Electrical & Electronics Engineering came into existence along with the establishment of the institution in the year 1979. It is now headed by Dr. Pramila M.E. ,Ph.D., supported by highly qualified, experienced and dedicated staff.<br>
+
+                      In this age of development in technology it is we the Electrical & Electronics engineers who hold the key to development with our horizon ranging from power generation to micro controllers. Founded in 1979, the department boasts of well equipped labs & a well qualified faculty. The department has endeavored in organizing regular field trips to various industries hence giving ample industrial exposure, thus integrating practical & theoretical knowledge.<br>
+                      
+                      To develop the overall personality of the students the Electrical Engineering Association (EEA) was formed. EEA holds various seminars ,technical talks & personality development programs to keep the students & staff updated with the latest developments. Several technical institutions like CPRI. PRDC etc, have conducted various lectures & workshops. To add to the credibility of the department various project papers have been acknowledged by the industry .The department has VTU recognized R&D centre and 6 faculty members from our department & also from other institutions have registered for Ph.D at this centre. Also 5 faculty members of our department have been awarded Ph.D. in diversified areas of EEE . Thus the department have strong sense of responsibility to provide an excellent technological education to the undergraduates and has been successful in providing platform to carry out R&D work. The students acquire the requisite knowledge for a successful carrier and the academic strength of the faculty is reflected by the alumini, many of whom are in the top echelons of industry and academia both in India and abroad.<br>
+                      
+                      Department has good placement record of 90% in top companies.<br>
+                      
+                      Department also has appreciable record of topping VTU twice i,e 1st rank with 07 Gold medals and secured 02 consecutive ranks (1st and 2nd rank) for the academic year 2013-14, 02 rank for the academic year 2015-16, 01 rank for the academic year 2016-17, two ranks during academic year 2017-18 .</p><br><br>
+                        
+                                <div class="d-flex justify-content-center"><div class="card" style="width: 18rem;">
+                                    <img src="/faculty/EE01.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dr.P.Pramila</h5>
+                                        <p class="card-text">Prof. & Head of the Dept
+                                            </p>
+                                        </div>
+                                    </div></div>
+                               
+                            
+                            <!-- Team Member Area -->
+                            <div class="section-heading mt-30">
+                               <h5> Vision and Mission </h5>
+                            </div>
+                           
+              <h3>Vision of the Department</h3>
+              <p >To produce competent Engineers to excel in the field of Electrical and Electronics Engineering by adopting strong teaching and research environment.</p>
+              <h3>Mission of the department</h3>
+              <p>•	To prepare graduates for life-long learning and leadership roles in their chosen fields. </p>
+              <p>•	To prepare students to provide technically sound, feasible and socially acceptable solutions to the real life problems.</p>
+              <p>•	To develop critical thinking, social and ethical responsibilities, team work and communication skills in graduate students.</p>
+              <p>•	To start post graduate programs and enhance the capabilities of research center through industry institute interaction.</p>
+              <p>•	To motivate students to pursue higher studies and promote entrepreneurship.</p>
+              <h3>Program Educational Objectives</h3>
+              <p>Program Educational Objectives</p>
+              <p><strong>PEO 1: Graduate of Electrical and Electronics engineering will</strong> excel as professionals with acquired knowledge in mathematics, science and engineering principles.</p>
+              <p><strong>PEO 2: Graduate of Electrical and Electronics engineering will</strong> possess the ability to identify and analyze real life problems and provide solutions that are technically sound, economically feasible and socially acceptable.</p>
+              <p><strong>PEO 3: Graduate of Electrical and Electronics Engineering will </strong>exhibit professionalism, ethical attitude, communication skills, team work and adopt to current trends by engaging in life-long learning. </p>
+              <p><strong>PEO 4: Graduate of Electrical and Electronics Engineering will </strong>exhibit interest in higher studies and research.</p>
+              <h3>Program Specific Outcomes (PSOs)</h3>
+              <p>Electrical and Electronics Engineering Graduates will be able to:</p>
+              <table width="619"><tbody><tr><td width="37">
+              <p><strong>1.</strong></p>
+              </td>
+              <td width="582">
+              <p>Model, estimate, simulate and analyze the performance of power system operation, control and their protection mechanisms.</p>
+              </td>
+              </tr><tr><td width="37">
+              <p><strong>2.</strong></p>
+              </td>
+              <td width="582">
+              <p>Design electrical machines to the given specifications, analyze and test their performance</p>
+              </td>
+              </tr><tr><td width="37">
+              <p><strong>3.</strong></p>
+              </td>
+              <td width="582">
+              <p>Design, develop and analyze electrical and electronic systems for applications to power and other domains.</p>
+              </td>
+              </tr></tbody></table><p>&nbsp;</p>					
+     
+                                    <!-- Faculty-->   
+                                  <div class="section-heading mt-30">
+                                    <h5>Faculty</h5>
+                                </div>
+                                {% for fac in facs %}
+                                <!-- Single Team Member -->
+                                <a href="#" >
+                                <div class="single-team-member d-flex align-items-center">
+                                    <div class="team-member-thumbnail">
+                                        <img src="/faculty/{{fac[0]}}.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="team-member-content">
+                                        <h6>{{fac[1]}}</h6>
+                                        <span>{{fac[2]}}</span>
+                                        Qualification:-{{fac[3]}}<br>
+                                           Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+                                        
+                                    </div>
+                                </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                           
+                    
+                            
+                        </div>
+                        
+                        
+                        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                            <div class="sidebar-area bg-white mb-30 box-shadow">
+                                
+                                <div class="section-heading">
+                                    <h5>Other Links</h5>
+                                </div>
+                                <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+                                
+                                <div class="social-followers-info">
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('EEE','ach')"><span>Achievements </span></button>
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('EEE','infra')"><span>Infrastructure </span></button>
+                                  <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('EEE','research')"><span>Research </span></button>
+                                  
+                                  
+                                    <br>
+                                </div>
+                                <div class="single-sidebar-widget p-30">
+                                    <!-- Section Title -->
+                                    <div class="section-heading">
+                                        <h5>Announcements</h5>
+                                    </div>
+                                    {% if annons|length==0 %}
+                                    <div> No Announcements</div>
+                                    <hr> {% else %} {% for annon in annons %}
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex">
+                                        <div class="post-thumbnail">
+                                            <span
+                                                style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                                            {{annon[2].year}}
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                        </div>
+                                    </div>
+                        
+                                    {% endfor %}
+                                    <div><a href="/archive/EEE/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ##### About Us Area End ##### -->
+            
+           
+            {% endblock %}

@@ -1,0 +1,174 @@
+{% extends "layout.html" %} {% block title %}Department Of Electronics and Communication Enginnering{% endblock %} {% block content %}
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Department Of Electronics and Communication Enginnering</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p>Electronics and Communication Engineering Department was established in the year 1979 with an intake of 40 students for Bachelor of Engineering (BE) programme and affiliated to Bangalore University. Subsequently the department of Electronics
+                        and Communication Engineering of Bangalore Institute of Technology was affiliated to Visvesvaraya Technological University during the year 1998. Currently, the department is offering Bachelor of Engineering with an intake of 180
+                        students and Master of Technology (M.Tech) in VLSI Design and Embedded systems with an intake of 18 students as well as M.Tech in Digital Electronics and Communication with an intake of 24 students under Post Graduate (PG) programme.
+                        Department is also offers Doctoral Program under VTU, BIT ECE Research center. The department has well qualified and experienced staff of 49 faculty which includes 5 Professors 10 Associate Professors and 34 Assistant Professors
+                        with an average experience of faculty is more than 15 years. There are about 9 Doctoral qualified faculty. The department has laboratory facilities to meet the curriculum of Visvesvaraya Technological University and beyond and
+                        is also supported by a well trained technical staff. As of now department students have achieved 20 ranks under Visvesvaraya Technological University with an accomplishment of VTU gold medal(1st Rank) by Ms.Mamatha.R for the academic
+                        year 2015-16 and 10 ranks under Bangalore University. The students of the department are well placed in various companies for jobs by the end of the course.<br>The department is headed by Dr.K.V.Prasad, who obtained his Ph.D in
+                        1993 from the university of Hull, Hull, United Kingdom under Nehru Centenary British Fellowships (Foreign and Common Wealth Office) Offered by Govt. of united Kingdom through Govt. of India. Prior to that, he did his B.Tech in
+                        1983 and M.Tech in 1985 from Sri Venkateswara University, Tirupati, Andhra Pradesh, India. Dr K.V.Prasad is with the department since 2010 after a brief industrial experiences.
+
+                    </p><br><br>
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/faculty/EC01.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr.K.V. Prasad</h5>
+                                <p class="card-text">Professor & Head</p>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- Team Member Area -->
+                    <div class="section-heading mt-30">
+                        <h5>Vision and Mission</h5>
+                    </div>
+
+                    <h3>
+                        VISION
+                    </h3>
+                    <div>
+                        Imparting Quality Education to achieve Academic Excellence in Electronics and Communication Engineering for Global Competent Engineers.
+                    </div>
+
+                    <br>
+
+                    <h3>
+                        MISSION
+                    </h3>
+                    <ul>
+                        <li>
+                            Create state of art infrastructure for quality education.
+                        </li>
+                        <li>
+                            Nurture innovative concepts and problem solving skills.
+                        </li>
+                        <li>
+                            Delivering Professional Engineers to meet the societal needs.
+                        </li>
+
+                    </ul>
+                    <h3>Program Educational Objectives (PEO’s)</h3>
+                    <p> 1. Prepare graduates to be professionals, Practicing engineers and entrepreneurs in the field of Electronics and communication engineering.<br> 2. To acquire sufficient knowledge base for innovative techniques in design and development
+                        of tools and systems.<br> 3. Capable of competing globally in multidisciplinary field.<br> 4. Achieve personal and professional success with awareness and commitment to ethical and social responsibilities as an individual as well
+                        as a team.<br> 5. Graduates will maintain and improve technical competence through continuous learning process. </p>
+                    <h3>Program Specific Outcomes</h3>
+                    <p> 1: The graduates will be able to apply the principles of Electronics and Communication in core areas.<br> 2: An ability to use latest hardware and software tools in Electronics and Communication engineering.<br> 3: Preparing Graduates
+                        to satisfy industrial needs and pursue higher studies with social-awareness and universal moral values.</p>
+
+                    <!-- Faculty-->
+                    <div class="section-heading mt-30">
+                        <h5>Faculty</h5>
+                    </div>
+                    {% for fac in facs %}
+                    <!-- Single Team Member -->
+                    <a href="#">
+                        <div class="single-team-member d-flex align-items-center">
+                            <div class="team-member-thumbnail">
+                                <img src="/faculty/{{fac[0]}}.jpg" alt="">
+
+                            </div>
+                            <div class="team-member-content">
+                                <h6>{{fac[1]}}</h6>
+                                <span>{{fac[2]}}</span> Qualification:-{{fac[3]}}
+                                <br> Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+                <!-- Insert Faculty here  -->
+
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+
+                    <div class="section-heading">
+                        <h5>Other Links</h5>
+                    </div>
+                    <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+
+                        <div class="social-followers-info">
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ECE','ach')"><span>Achievements </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ECE','infra')"><span>Infrastructure </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ECE','research')"><span>Research </span></button>
+                            <button class="btn" id="rBtn" type="button" data-toggle="modal" data-target="#popup" onclick="getRes('ECE','post')"><span>Post Graduate </span></button>
+
+                            <br>
+                        </div>
+                        <div class="single-sidebar-widget p-30">
+                            <!-- Section Title -->
+                            <div class="section-heading">
+                                <h5>Announcements</h5>
+                            </div>
+                            {% if annons|length==0 %}
+                            <div> No Announcements</div>
+                            <hr> {% else %} {% for annon in annons %}
+                            <!-- Single Blog Post -->
+                            <div class="single-blog-post d-flex">
+                                <div class="post-thumbnail">
+                                    <span
+                                        style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}}
+                                    {{annon[2].year}}
+                                </div>
+                                <div class="post-content">
+                                    <a href="/announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                                </div>
+                            </div>
+                
+                            {% endfor %}
+                            <div><a href="/archive/ECE/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+
+
+{% endblock %}
